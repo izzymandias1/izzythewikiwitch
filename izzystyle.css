@@ -150,7 +150,7 @@ a:hover {
 b {
     color: var(--izzy-gold);
 }
-b:hover {
+b:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
     color: var(--text-color-base-light);
 }
 
