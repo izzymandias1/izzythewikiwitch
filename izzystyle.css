@@ -75,7 +75,7 @@ h6 {
 }
 
 /* CSS reset end */
-header {
+.headertext {
     width: var(--body-width);
     padding: 0.5em;
     background-color: var(--izzy-dark-navy);
@@ -95,6 +95,7 @@ body {
     --izzy-gold: #b0ac7d;
     --izzy-dark-gold: #84815e;
     --izzy-navy: #2a293d;
+    --izzy-mid-navy: #232233;
     --izzy-dark-navy: #201f2e;
     --text-color-base-dark: #1c2734;
     --text-color-base-light: #dbdbdb;
@@ -155,6 +156,17 @@ h1 {
     font-style: normal;
     color: var(--izzy-gold);
     font-size: 2rem;
+}
+h2 {
+    font-style: normal;
+    color: var(--izzy-gold);
+    font-size: 1.5rem;
+    text-decoration: underline dotted;
+}
+h3 {
+    font-style: normal;
+    color: var(--izzy-gold);
+    font-size: 1.2rem;
 }
 
 sub {
@@ -229,8 +241,140 @@ sub {
     background-color: var(--izzy-gold);
     color: var(--izzy-navy);
 }
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: var(--izzy-dark-gold);
+  color: var(--izzy-navy);
+}
 
 .center {
     text-align: center;
     max-width: var(--body-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgfocus {
+    box-shadow: 5px 10px 0px var(--izzy-gold);
+    margin: 1em;
+    width: 400px;
+    border-radius: 0.2em;
+}
+
+details {
+    margin: 1em;
+}
+summary {
+    color: var(--izzy-gold);
+    cursor: pointer;
+}
+
+.portfolioentry{
+    background-color: var(--izzy-dark-navy);
+    padding: 0.5em;
+    margin: 0.2em;
+}
+.portfolioentry:hover{
+    background-color: var(--izzy-mid-navy);
+}
+
+/* gallery */
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  max-width: var(--body-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.prev{
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: var(--izzy-dark-navy);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: var(--izzy-gold);
+  background-color: var(--izzy-navy);
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  padding: 2px 16px;
+  margin: 5px;
+  font-size: 2em;
+  color: var(--izzy-gold);
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
 }
