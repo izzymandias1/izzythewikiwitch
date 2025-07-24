@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="EN">
+    <!-- font awesome style sheet-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <head>
         <title>Izzy The Wiki Witch</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,17 +17,23 @@
             * {
                 margin: 0;
             }
-            header {
-                max-width: var(--body-width);
-            }
-            main {
-                max-width: var(--body-width);
-            }
+
             /* 3. Enable keyword animations */
             @media (prefers-reduced-motion: no-preference) {
                 html {
                     interpolate-size: allow-keywords;
                 }
+            }
+            header {
+                max-width: var(--body-width);
+                padding: 1em;
+                background-color: var(--izzy-dark-navy);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            main {
+                max-width: var(--body-width);
             }
             body {
                 /* 4. Add accessible line-height */
@@ -35,14 +43,39 @@
                 /* text color */
                 --body-width: 1000px;
                 --izzy-gold: #b0ac7d;
+                --izzy-dark-gold: #84815e;
                 --izzy-navy: #383751;
+                --izzy-dark-navy: #2a293d;
                 --text-color-base-dark: #1c2734;
                 --text-color-base-light: #f2f2f2;
                 --text-color-disabled: #f2f2f2;
                 background-color: var(--izzy-navy);
-                color: var(--text-color-base-light)
+                color: var(--text-color-base-light);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
-
+            footer {
+                font-size: 0.8rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            /* for tiny text*/
+            .tiny {
+                font-size: 0.5rem;
+                color: var(--izzy-gold);
+                text-align: center;
+            }
+            a:link {
+                color: var(--izzy-gold);
+            }
+            a:visited {
+                color: var(--izzy-dark-gold);
+            }
+            a:hover {
+                color: var(--text-color-base-light);
+            }
             /* 6. Improve media defaults */
             img, picture, video, canvas, svg {
                 display: block;
@@ -93,6 +126,55 @@
                 max-width: 100%;
                 display: block;
             }
+            /* Tooltips */
+            /* Tooltip container */
+            .tooltip {
+                position: relative;
+                display: inline-block;
+                border-bottom: 0.5px dotted black; /* If you want dots under the hoverable text */
+            }
+
+            /* Tooltip text */
+            .tooltip .tooltiptext {
+                visibility: hidden;
+                width: 120px;
+                background-color: var(--izzy-dark-navy);
+                color: var(--izzy-gold);
+                text-align: center;
+                padding: 5px 0;
+                border-radius: 6px;
+                
+                /* Position the tooltip text - see examples below! */
+                position: absolute;
+                z-index: 1;
+                bottom: 100%;
+                left: 50%;
+                margin-left: -60px;
+            }
+
+            /* Show the tooltip text when you mouse over the tooltip container */
+                .tooltip:hover .tooltiptext {
+                visibility: visible;
+            }
+
+            /* Top navigation */
+            .topnav {
+                background-color: var(--text-color-base-dark);
+                overflow: hidden;
+            }
+            .topnav a {
+                float: left;
+                text-align: center;
+                color: var(--izzy-gold);
+                padding: 14px 16px;
+            }
+            .topnav a:visited {
+                color: var(--izzy-dark-gold);
+            }
+            .topnav a:hover {
+                background-color: var(--izzy-gold);
+                color: var(--izzy-navy);
+            }
         </style>
     </head>
     <body>
@@ -104,9 +186,23 @@
             width="200"/>
             <h1>izzythewikiwitch</h1>
             <sub>what if i made my own wiki. with yuri. and love.</sub>
+            <div class="topnav">
+                <a href="https://bsky.app/profile/izzythewikiwitch.bsky.social">bsky</a>
+                <a href="https://discordapp.com/users/384753654613278722">discord</a>
+            </div>
         </header>
         <main>   
-            <p>i'm gay and you're also gay if you're reading this. sucks to suck bozo</p>
+            <p>this is what we call "site content"</p>
         </main>
+        <footer>
+            <div>
+            <a href="https://bsky.app/profile/izzythewikiwitch.bsky.social">bsky</a>
+            <div class="tooltip"><a href="https://discordapp.com/users/384753654613278722"><i class="fa-brands fa-discord"></i>discord</a>
+                <span class="tooltiptext">@izzymandias</span>
+            </div>
+            </div>
+            <p class="tiny">i'm gay and you're also gay if you're reading this. sucks to suck bozo.<br/>
+                izzythewikiwitch © 2025</p>
+        </footer>
     </body>
 </html>
