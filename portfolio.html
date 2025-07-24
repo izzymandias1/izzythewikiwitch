@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+<style>
+    #portfolio{
+        background-color: var(--izzy-dark-gold);
+        color: var(--izzy-dark-navy);
+    }
+    body{
+        --gallerywidth: 800px;
+        --gallerysubwidth: 200px;
+    }
+    .galleryimg {
+        width: auto;
+        height: 1000px;
+        object-fit: contain;
+    }
+    .thumbimg{
+        width:auto;
+        height: 100px;
+        object-fit: cover;
+    }
+</style>
+
+<head>
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="izzystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header id="app-header"></header>
+    <script async src="header.js"></script>
+    <main>
+        <div class="center">
+            <h1>portfolio</h1>
+            <p>yeah, i've worked on "things", you might say.</p>
+        </div>
+        <div class="portfolioentry">
+            <h2>the sojourn</h2>
+            <h3>teldrani</h3>
+            <p>i created <b>teldrani</b> for <a href="https://bsky.app/profile/thesojourn.bsky.social">the sojourn audio
+                    drama</a>.<br />
+                teldrani is a conlang primarily based on japanese, with sprinkles of arabic and welsh in there too
+                (because i hate you and myself).<br />
+                it has been included in things such as <a href="https://youtu.be/pWOtJY9d2nY">a lore short</a> and <a
+                    href="https://www.thesojournaudiodrama.com">the audio drama</a> itself.
+                many actors have suffered it and i thank them from all from the bottom of my heart.
+            </p>
+            <h3>voice acting</h3>
+            <p>my many illustrious roles in the sojourn include; <br />
+            <ul>
+                <li>a cool trans engineer who only speaks teldrani (the language i made up, remember?) in <a
+                        href="https://www.thesojournaudiodrama.com/s01v03">season 1, episode 9.</a></li>
+                <li>a comms officer in <a href="https://www.youtube.com/watch?v=bdHPwPfHXlI">frontier war episode 1:
+                        battle of addicus.</a></li>
+            </ul>
+            </p>
+            <h3>art</h3>
+            <p>i've also done a few art pieces on commission from the sojourn audio drama (they are the only people who
+                have ever so consistently paid me for my work, thanks lads).
+                you can see them in various works in the <a
+                    href="https://www.youtube.com/playlist?list=PLLnNVFgDJ3vWZ7kffVPrisfmQWLBbJIcU">worlds of tantalus
+                    series</a></p>
+        </div>
+        <div class="portfolioentry">
+            <h2>stardust</h2>
+            <h3>editing</h3>
+            <p>i've been editing with the creator of <a
+                    href="https://bsky.app/profile/thestarsaredestiny.com">stardust</a>, <a
+                    href="https://bsky.app/profile/faithfalkner.com">faith falkner</a>, for basically as long as she's
+                been talking about it. it's a story that i adore and i'm happy that she trusts me to help edit it into
+                shape.<br />
+                i do a bit of everything as an editor, including, but not limited to, line-editing, story-editing, first
+                draft approval, and so forth</p>
+        </div>
+        <div class="portfolioentry">
+            <h2>personal commissions</h2>
+            <h3>character art</h3>
+            <p>i've done a lot of character art for a variety of people. yes i draw furry art. please commission me. you
+                people pay so kindly for artist's work and i respect the furry community more than 90% of the internet
+                because of it. you guys looked at the concept of ai and found it so repulsive you started paying real
+                artists <b>MORE</b>. love u all.</p>
+            <h3>vector art</h3>
+            <p>i've created logos and concept designs for people both paid and for free (when I was young and stupid)
+                before. vectors are nice. hire me for this also.</p>
+        </div>
+        <div class="portfolioentry">
+            <h2>poetry</h2>
+            <p>i've been doing poetry for a long time, but only recently got published.</p>
+            <ul>
+            <li>here's my first poetry book; <a href="https://www.amazon.co.uk/This-Book-Not-About-Japan/dp/1738412873">this book is not about japan</a></li>
+            <li>i have a second book coming out in september, called <b>what happens in the mindscape, stays in the mindscape</b>. watch this space</li>
+            <li>i also regularly post poetry to bluesky and the like. recently, that has related to a super secret project i don't wanna talk about yet, but will eventually</li>
+            </ul>
+        </div>
+        <div class="portfolioentry">
+            <h2>personal artwork</h2>
+            <p>i've been making visual art for a long time now, since 2021 at least. here's a selection.</p>
+            <div class="container">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                    <img src="images/Gilded_Lily.png" class="galleryimg">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
+                    <img src="images/All My Friends (Poster).png" class="galleryimg">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
+                    <img src="images/deergirl_doobie.png" class="galleryimg"">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="images/Deer and Headlights.png" class="galleryimg"">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
+                    <img src="images/Kye Name Her Holy.png" class="galleryimg"">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="images/A Thousand Miles Close (Katana).png" class="galleryimg"">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                <!-- Image text -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <!-- Thumbnail images -->
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="images/Gilded_Lily.png" class="thumbimg" onclick="currentSlide(1)" alt="Gilded Lily">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/All My Friends (Poster).png" class="thumbimg" onclick="currentSlide(2)" alt="All My Friends">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/deergirl_doobie.png" class="thumbimg" onclick="currentSlide(3)"
+                            alt="Deergirl">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/Deer and Headlights.png" class="thumbimg" onclick="currentSlide(4)"
+                            alt="Deer and headlights">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/Kye Name Her Holy.png" class="thumbimg" onclick="currentSlide(5)"
+                            alt="Fanart and Fashion">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/A Thousand Miles Close (Katana).png" class="thumbimg" onclick="currentSlide(6)" alt="A Thousand Miles Close">
+                    </div>
+                </div>
+                <script async src="gallery.js"></script>
+            </div>
+        </div>
+       
+    </main>
+    <footer id="app-footer"></footer>
+    <script async src="footer.js"></script>
+</body>
+
+</html>
