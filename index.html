@@ -15,7 +15,12 @@
             * {
                 margin: 0;
             }
-
+            header {
+                max-width: var(--body-width);
+            }
+            main {
+                max-width: var(--body-width);
+            }
             /* 3. Enable keyword animations */
             @media (prefers-reduced-motion: no-preference) {
                 html {
@@ -84,18 +89,23 @@
             * {
                 font-family: 'Courier New', Courier, monospace; 
             }
+            .logo{
+                max-width: 100%;
+                display: block;
+            }
         </style>
     </head>
     <body>
         <header>
-            <img 
+            <img
+            class="logo" 
             src="images/2024_PFP.png" 
             alt="izzy's logo for 2024 to 2025. a picture of a woman with deer antlers in front of the lesbian flag"
             width="200"/>
-        </header>
-        <main>
             <h1>izzythewikiwitch</h1>
             <sub>what if i made my own wiki. with yuri. and love.</sub>
+        </header>
+        <main>   
             <p>i'm gay and you're also gay if you're reading this. sucks to suck bozo</p>
         </main>
     </body>
