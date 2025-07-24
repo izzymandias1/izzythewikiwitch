@@ -1,242 +1,48 @@
 <!DOCTYPE html>
+
 <html lang="EN">
-    <!-- font awesome style sheet-->
+<!-- font awesome style sheet-->
+
+<head>
+    <title>Izzy The Wiki Witch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="izzystyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <head>
-        <title>Izzy The Wiki Witch</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charset="utf-8" />
-        <style>
-            /* CSS reset courtesy of https://www.joshwcomeau.com/css/custom-css-reset/ */
-            /* 1. Use a more-intuitive box-sizing model */
-            *, *::before, *::after {
-                box-sizing: border-box;
-            }
-            /* 2. Remove default margin */
-            * {
-                margin: 0;
-            }
-            /* 3. Enable keyword animations */
-            @media (prefers-reduced-motion: no-preference) {
-                html {
-                    interpolate-size: allow-keywords;
-                }
-            }
-            body {
-                /* 4. Add accessible line-height */
-                line-height: 1.5;
-                /* 5. Improve text rendering */
-                -webkit-font-smoothing: antialiased;
-            }
-            /* 6. Improve media defaults */
-            img, picture, video, canvas, svg {
-                display: block;
-                max-width: 100%;
-            }
-            /* 7. Inherit fonts for form controls */
-            input, button, textarea, select {
-                font: inherit;
-            }
-            /* 8. Avoid text overflows */
-            p, h1, h2, h3, h4, h5, h6 {
-                overflow-wrap: break-word;
-            }
-             /* 9. Improve line wrapping */
-            p {
-                text-wrap: pretty;
-            }
-            h1, h2, h3, h4, h5, h6 {
-                text-wrap: balance;
-            }
 
-            /* 10. Create a root stacking context */
-            #root, #__next {
-                isolation: isolate;
-            }
-            /* CSS reset end */
-            header {
-                width: var(--body-width);
-                padding: 0.8em;
-                background-color: var(--izzy-dark-navy);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            main {
-                max-width: var(--body-width);
-                padding: 1em;
-            }
-            body {
-                /* text color */
-                --body-width: 1000px;
-                --izzy-gold: #b0ac7d;
-                --izzy-dark-gold: #84815e;
-                --izzy-navy: #2a293d;
-                --izzy-dark-navy: #201f2e;
-                --text-color-base-dark: #1c2734;
-                --text-color-base-light: #dbdbdb;
-                --text-color-disabled: #f2f2f2;
-                background-color: var(--izzy-navy);
-                color: var(--text-color-base-light);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            footer {
-                width: var(--body-width);
-                font-size: 0.8rem;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                background-color: var(--izzy-dark-navy);
-                color: var(--izzy-gold);
-                text-align: center;
-                padding: 0.8em;
-            }
-            /* for tiny text*/
-            .tiny {
-                font-size: 0.5rem;
-                
-            }
-            a:link {
-                color: var(--izzy-gold);
-            }
-            a:visited {
-                color: var(--izzy-dark-gold);
-            }
-            a:hover {
-                color: var(--text-color-base-light);
-            }
-            .title {
-                font: weight 400px;
-                font-style: normal;
-                color: var(--text-color-disabled);
-                font-size: 3rem;
-                text-shadow: 0px 2px var(--izzy-gold);
-                -webkit-text-stroke: 2px var(--izzy-gold);
-                font-family: 'Courier New', Courier, monospace;
-            }
-            b {
-                color: var(--izzy-gold);
-            }
-            /* general h1 */
-            h1 {
-                font-style: normal;
-                color: var(--izzy-gold);
-                font-size: 2rem;               
-            }
-            sub {
-                font-style: italic;
-            }
-            /* default font family */
-            * {
-                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            }
-            .logo{
-                max-width: 100%;
-                display: block;
-            }
-            /* Tooltips */
-            /* Tooltip container */
-            .tooltip {
-                position: relative;
-                display: inline-block;
-                border-bottom: 0.5px dotted var(--izzy-dark-navy); /* If you want dots under the hoverable text */
-            }
-            /* Tooltip text */
-            .tooltip .tooltiptext {
-                visibility: hidden;
-                width: 120px;
-                background-color: var(--izzy-dark-navy);
-                color: var(--izzy-gold);
-                text-align: center;
-                padding: 5px 0;
-                border-radius: 6px;
-                
-                /* Position the tooltip text */
-                position: absolute;
-                z-index: 1;
-                bottom: 100%;
-                left: 50%;
-                margin-left: -60px;
-            }
+</head>
 
-            /* Show the tooltip text when you mouse over the tooltip container */
-                .tooltip:hover .tooltiptext {
-                visibility: visible;
-            }
+<body>
+    <header id="app-header"></header>
+    <script async src="header.js"></script>  
+    <main>
+        <div class="center">
+            <h1>this is what we call "site content"</h1>
+            <p>
+                aight so. imagine this. the uk government doesn't want children to see nudity online. <i>"sure. fair
+                    enough."</i> you think.
+                so the government starts checking everyone's id. gotta prove you're an adult to be an adult online.
+                <i>"sure. fair enough."</i> you think.
+                then you find out the government is gonna be checking this <b>id</b> through a system ran by <b>EPIC
+                    GAMES</b>. yk. the fortnite people.<br />
+                you're reasonable, so you ask <i>"what? huh? why the fuck?"</i>
+                this was me creating this website. simply put; i'm <b>fucking sick</b> of my data being treated like a
+                plaything, especially sensitive data like my <b>FUCKING PASSPORT</b> and other id documents.
+                as a trans woman, this does not make me feel safe and secure online. as a person <b>GENERALLY</b>, it
+                does not make me feel safe online. and, knowing how
+                deeply ineffectual government responses to children's spaces online are, <b>this will do yet more harm
+                    than good</b>.
+            </p>
+            <p>
+                so. what the fuck am i gonna do about it? learn web development? well it seems like the people in charge
+                weren't banking on the fact that i'm autistically interested
+                in protecting myself and my data. so yes. here is a website. i will use it for things and creating
+                things. please enjoy.
+            </p>
+        </div>
+    </main>
+    <footer id="app-footer"></footer>
+    <script async src="footer.js"></script>  
+</body>
 
-            /* Top navigation */
-            .topnav {
-                background-color: var(--text-color-base-dark);
-                overflow: hidden;
-                width: var(--body-width);
-                margin-top: 1em;
-                padding: 5px;
-                display: flex;
-                justify-content: center;
-            }
-            .topnav a {
-                float: left;
-                text-align: center;
-                color: var(--izzy-gold);
-                padding: 14px 16px;
-            }
-            .topnav a:visited {
-                color: var(--izzy-dark-gold);
-            }
-            .topnav a:hover {
-                background-color: var(--izzy-gold);
-                color: var(--izzy-navy);
-            }
-            .center {
-                text-align: center;
-                max-width: var(--body-width);
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <img
-            class="logo" 
-            src="images/2024_PFP.png" 
-            alt="izzy's logo for 2024 to 2025. a picture of a woman with deer antlers in front of the lesbian flag."
-            width="200"/>
-            <h1 class="title">izzythewikiwitch</h1>
-            <sub>"what if i made my own wiki. with yuri. and love."</sub>
-            <div class="topnav">
-                <a href="https://bsky.app/profile/izzythewikiwitch.bsky.social">bsky</a>
-                <a href="https://discordapp.com/users/384753654613278722">discord</a>
-                <a href="#">portfolio</a>
-            </div>
-        </header>
-        <main>
-            <div class="center">   
-                <h1>this is what we call "site content"</h1>
-                <p>
-                    aight so. imagine this. the uk government doesn't want children to see nudity online. <i>"sure. fair enough."</i> you think. 
-                    so the government starts checking everyone's id. gotta prove you're an adult to be an adult online. <i>"sure. fair enough."</i> you think.
-                    then you find out the government is gonna be checking this <b>id</b> through a system ran by <b>EPIC GAMES</b>. yk. the fortnite people.<br/>
-                    you're reasonable, so you ask <i>"what? huh? why the fuck?"</i>
-                    this was me creating this website. simply put; i'm <b>fucking sick</b> of my data being treated like a plaything, especially sensitive data like my <b>FUCKING PASSPORT</b> and other id documents.
-                    as a trans woman, this does not make me feel safe and secure online. as a person <b>GENERALLY</b>, it does not make me feel safe online. and, knowing how
-                    deeply ineffectual government responses to children's spaces online are, <b>this will do yet more harm than good</b>.
-                </p>
-                <p>
-                    so. what the fuck am i gonna do about it? learn web development? well it seems like the people in charge weren't banking on the fact that i'm autistically interested
-                    in protecting myself and my data. so yes. here is a website. i will use it for things and creating things. please enjoy.
-                </p>
-            </div>
-        </main>
-        <footer>
-            <div>
-            <a href="https://bsky.app/profile/izzythewikiwitch.bsky.social">bsky</a>
-            <div class="tooltip"><a href="https://discordapp.com/users/384753654613278722"><i class="fa-brands fa-discord"></i>discord</a>
-                <span class="tooltiptext">@izzymandias</span>
-            </div>
-            </div>
-            <p class="tiny">i'm gay and you're also gay if you're reading this. sucks to suck bozo.<br/>
-                izzythewikiwitch © 2025</p>
-        </footer>
-    </body>
 </html>
