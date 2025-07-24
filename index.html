@@ -27,6 +27,15 @@
                 line-height: 1.5;
                 /* 5. Improve text rendering */
                 -webkit-font-smoothing: antialiased;
+                /* text color */
+                --body-width: 1000px;
+                --izzy-gold: #b0ac7d;
+                --izzy-navy: #383751;
+                --text-color-base-dark: #1c2734;
+                --text-color-base-light: #f2f2f2;
+                --text-color-disabled: #f2f2f2;
+                background-color: var(--izzy-navy);
+                color: var(--text-color-base-light)
             }
 
             /* 6. Improve media defaults */
@@ -45,6 +54,19 @@
                 overflow-wrap: break-word;
             }
 
+            /* general h1 */
+            h1 {
+                font: weight 400px;
+                font-style: normal;
+                color: var(--text-color-base-light);
+                font-size: 3rem;
+                text-shadow: 0px 2px var(--izzy-gold);
+                -webkit-text-stroke: 2px var(--izzy-gold);
+            }
+            sub {
+                font-style: italic;
+            }
+
             /* 9. Improve line wrapping */
             p {
                 text-wrap: pretty;
@@ -58,7 +80,6 @@
                 isolation: isolate;
             }
             /* CSS reset end */
-            
             /* default font family */
             * {
                 font-family: 'Courier New', Courier, monospace; 
@@ -74,7 +95,7 @@
         </header>
         <main>
             <h1>izzythewikiwitch</h1>
-            <sub><i>what if i made my own wiki. with yuri. and love.</i></sub><br/>
+            <sub>what if i made my own wiki. with yuri. and love.</sub>
             <p>i'm gay and you're also gay if you're reading this. sucks to suck bozo</p>
         </main>
     </body>
