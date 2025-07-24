@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="EN">
+
+<style>
+    body {
+        background-image: url('images/Deer\ Pattern\ BG.png');
+        --body-width: 1000px;
+         display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    img {
+        margin-top: 10em;
+        margin-bottom: 1em;
+    }
+
+    .typewriter h1 {
+        overflow: hidden;
+        /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid black;
+        /* The typwriter cursor */
+        white-space: nowrap;
+        /* Keeps the content on a single line */
+        margin: 0 auto;
+        /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em;
+        /* Adjust as needed */
+        animation:
+            typing 3.5s steps(40, end),
+            blink-caret .75s step-end infinite;
+    }
+
+    /* The typing effect */
+    @keyframes typing {
+        from {
+            width: 0
+        }
+
+        to {
+            width: 100%
+        }
+    }
+
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+
+        from,
+        to {
+            border-color: transparent
+        }
+
+        50% {
+            border-color: black;
+        }
+    }
+    .center {
+    text-align: center;
+    max-width: var(--body-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: flex-start;
+    }
+    
+    #overlay-content {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<head>
+    <title>deer doobie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <main>
+        <div class="center">
+            <img id="deergirl" src="images/deergirl_doobie.png" alt="a deergirl is offering you a rolled weed package. it is poorly photoshopped." style="width:30%">
+            <div class="typewriter">
+                <h1>hey gamer. wanna take a hit of this?</h1>
+            </div>
+            <div style="display: inline;">
+                <button id="no" onclick="blowUp('images/get blown up.gif', 4000, 4000, 'the screen blew up')" style="left: 0;">nah. i'm waht they call a "valedictorian"</button>
+                <audio id="kaboom" src="sounds/blow up.mp3"></audio>
+                <script>
+                    function blowUp(src, width, height, alt) {
+                        const audioPlayer = document.getElementById('kaboom');
+                        const playButton = document.getElementById('no');
+                        var img = document.createElement("img");
+                        img.src = src;
+                        img.width = width;
+                        img.height = height;
+                        img.alt = alt;
+                        img.id = "overlay-content";
+                        
+                        function sleep(ms) {
+                            return new Promise(resolve => setTimeout(resolve, ms));
+                        }
+                        // This next line will just add it to the <body> tag
+                        sleep(1500).then(() => document.body.appendChild(img));
+                        sleep(1200).then(() => audioPlayer.play());
+                        sleep(2000).then(() => location.href = 'index.html');
+                    }
+                </script>
+                <button id="yes" onclick="beNice('images/zaza.gif', 4000, 4000, 'the screen blew up')" style="right: 0;">fuck yeah??</button>
+                <audio id="yay" src="sounds/yay.mp3"></audio>
+                <audio id="happybirthday" src="sounds/HappyBirthday.mp3"></audio>
+                <audio id="loudcoughing" src="sounds/coughing.mp3"></audio>
+                <script>
+                    function beNice(src, width, height, alt) {
+                        const yay = document.getElementById('yay');
+                        const happyBirthday = document.getElementById('happybirthday');
+                        const coughing = document.getElementById('loudcoughing');
+                        const playButton = document.getElementById('yes');
+                        var img = document.createElement("img");
+                        img.src = src;
+                        img.width = width;
+                        img.height = height;
+                        img.alt = alt;
+                        img.id = "overlay-content";
+                        
+                        function sleep(ms) {
+                            return new Promise(resolve => setTimeout(resolve, ms));
+                        }
+                        // This next line will just add it to the <body> tag
+                        sleep(1500).then(() => document.body.appendChild(img));
+                        sleep(1200).then(() => document.getElementById("deergirl").src = "images/deergirl doobie party time.png"); 
+                        sleep(900).then(() => yay.play());
+                        sleep(3000).then(() => happyBirthday.play());
+                        sleep(8000).then(() => coughing.play());
+                        sleep(12000).then(() => document.getElementById("deergirl").src = "images/deergirl doobie things get darker.png"); 
+                        sleep(17400).then(() => location.href = 'index.html');
+                    }
+                </script>
+            </div>
+        </div>
+    </main> 
+</body>
+</html>
