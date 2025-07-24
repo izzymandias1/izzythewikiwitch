@@ -1,4 +1,5 @@
     let appHeader = `
+    
     <header class="headertext">
         <img class="logo" src="images/2024_PFP.png"
             alt="izzy's logo for 2024 to 2025. a picture of a woman with deer antlers in front of the lesbian flag."
