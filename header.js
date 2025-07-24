@@ -7,6 +7,7 @@
         <sub>"what if i made my own wiki. with yuri. and love."</sub>
         <div class="topnav">
             <a id="index" href="index.html">what</a>
+            <a id="about" href="about.html">who</a>
             <a id="portfolio" href="portfolio.html">portfolio</a>
         </div>
     </header>`;
