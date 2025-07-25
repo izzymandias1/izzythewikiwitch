@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html lang="EN">
+
+<style>
+    body {
+        background-image: url('images/pass\ the\ YURI.jpg');
+        background-attachment: scroll;
+    }
+
+    /* yuri button */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    /*.panel {
+        margin: 0 auto 5vh auto;
+        position: relative;
+        border: solid 1px black;
+        width: 100%;
+        height: 65vh;
+        font-size: 20px;
+        text-align: center;
+        animation-name: cssAnimationreverse;
+        animation-direction: reverse;
+        animation-duration: 0.12s;
+        animation-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+        transform-origin: bottom;
+
+        .yuri {
+            width: 100%;
+            height: 85%;
+
+            img {
+                width: auto;
+                height: 100%;
+            }
+        }
+
+        .stick {
+            position: absolute;
+            border: solid 3px black;
+            width: 8vh;
+            height: 20%;
+            margin-right: auto;
+            bottom: 0;
+            left: 50%;
+            margin-left: -4vh;
+        }
+    }*/
+    .panelinitial {
+        visibility: hidden;
+    }
+    .panelup {
+        animation-name: cssAnimation;
+        visibility: visible;
+        animation-duration: 0.12s;
+        animation-iteration-count: 1;
+        animation-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+        animation-fill-mode: forwards;
+        transform-origin: bottom;
+        .yuri {
+            width: 100%;
+            height: 85%;
+
+            img {
+                width: auto;
+                height: 100%;
+            }
+        }
+    }
+    .paneldown {
+        animation-name: cssAnimationreverse;
+        animation-duration: 0.12s;
+        animation-iteration-count: 1;
+        animation-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+        animation-fill-mode: forwards;
+        transform-origin: bottom;
+        .yuri {
+            width: 100%;
+            height: 85%;
+
+            img {
+                width: auto;
+                height: 100%;
+            }
+        }
+    }
+    /* cubic-bezier(0.165, 0.840, 0.440, 1.000) */
+    @keyframes cssAnimation {
+        0% {
+            visibility: hidden;
+            transform: scaleY(0%);
+        }
+        100% {
+            visibility: visible;
+            transform: scaleY(100%);
+        }
+    }
+    @keyframes cssAnimationreverse {
+        0% {
+            transform: scaleY(100%);
+        }
+        100% {
+            visibility: hidden;
+            transform: scaleY(0%);
+        }
+    }
+    .stand {
+        /*   animation: stand 0.2s; */
+        transform: rotateX(0deg);
+    }
+
+    button {
+        width: 25vh;
+        height: 25vh;
+        box-shadow: inset 0px 2px 0px 0px #f29c93;
+        background: linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+        background-color: #fe1a00;
+        border-radius: 50%;
+        border: 2px solid #d83526;
+        cursor: pointer;
+        color: #ffffff;
+        font-size: 10vh;
+        font-weight: bold;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #b23e35;
+        outline: none;
+    }
+
+    button:hover {
+        background: linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
+        background-color: #ce0100;
+    }
+
+    button:active {
+        position: relative;
+        top: 3px;
+        border: 0 solid #d83526;
+    }
+
+    .credit {
+        font-size: 0.7em;
+        text-align: right;
+        position: absolute;
+        right: 1em;
+        bottom: 0.5em;
+    }
+</style>
+
+<head>
+    <title>pass the yuri</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <main>
+        <div id="panel" class="panelinitial" style="margin-top: 5em;">
+            <div class="yuri">
+                <img id="yuri" src="https://pbs.twimg.com/media/CtmN7CsVIAA7Oty.jpg" style="height: 500px;">
+            </div>
+        </div>
+
+        <button id="button" onclick="yuriButton()">百合</button>
+        <audio src="sounds/go-yuri(1).mp3" id="yay"></audio>
+        <script>
+            const yuri = ["images/deergirl_doobie.png", "images/deergirl doobie things get darker.png", "images/yuri-nuke.gif", "https://media.tenor.com/NppDCV0aKtsAAAAC/anime-yuri.gif","https://media.tenor.com/WO9ng2h0CYUAAAAd/rizu-to-aoi-tori-anime.gif", "https://media.tenor.com/FLczOsAKtFoAAAAC/lycoris-recoil-lyco-ryco.gif", "https://media.tenor.com/5AWbY0EtccsAAAAd/suletta-mercury-witch-from-mercury.gif", "https://media.tenor.com/m/IQttZaJ9NlkAAAAC/mercurywitch-gwitch.gif"];
+            const panel = document.getElementById('panel');
+            const audio = document.getElementById('yay');
+            const button = document.getElementById('button');
+            function yuriButton() {
+                var random = Math.floor(Math.random() * yuri.length);
+                document.getElementById('yuri').src = yuri[random];
+                audio.pause();
+                audio.currentTime = 0;
+                audio.play();
+                document.getElementById('panel').className = 'paneldown';
+                document.getElementById('panel').className = 'panelup';
+                function sleep(ms) {
+                    return new Promise(resolve => setTimeout(resolve, ms));
+                }
+                sleep(3000).then(() => document.getElementById('panel').className = 'paneldown');
+            }
+
+        </script>
+    </main>
+    <footer>
+        <div class="credit">
+            <p><a href="https://twitter.com/pomo" target="_blank">@pomo</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
