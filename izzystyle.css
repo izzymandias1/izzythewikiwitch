@@ -101,6 +101,7 @@ body {
     --text-color-base-light: #dbdbdb;
     --text-color-disabled: #f2f2f2;
     background-color: var(--izzy-navy);
+    background-image: url('images/Deer_tile.png');
     color: var(--text-color-base-light);
     display: flex;
     flex-direction: column;
@@ -182,8 +183,10 @@ sub {
 }
 
 .logo {
+    border-radius: 25px;
     max-width: 100%;
     display: block;
+    padding: 0.5em;
 }
 
 /* Tooltips */
@@ -324,7 +327,10 @@ summary {
   user-select: none;
   -webkit-user-select: none;
 }
-
+main {
+  background-color: var(--izzy-dark-navy);
+  padding: 1em;
+}
 .prev{
     left: 0;
     border-radius: 3px 0 0 3px;
@@ -485,4 +491,12 @@ code.horus:hover {
 .buttoncolumn{
     flex: 33.33%;
     padding: 5px;
+}
+
+.intext {
+  width: 0.8em; 
+  vertical-align:middle; 
+  display: inline;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
 }

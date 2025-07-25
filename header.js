@@ -1,10 +1,10 @@
     let appHeader = `
     
     <header class="headertext">
-        <img class="logo" src="images/2024_PFP.png"
+        <img class="logo" src="images/buttons/me_irl_(starship_velo).gif"
             alt="izzy's logo for 2024 to 2025. a picture of a woman with deer antlers in front of the lesbian flag."
-            width="200" />
-        <h1 class="title">izzythewikiwitch</h1>
+            height="400" />
+        <h1 class="title"><img src="images/2024_PFP.png" class="intext">izzythewikiwitch<img src="images/2024_PFP.png" class="intext"></h1>
         <sub>"what if i made my own wiki. with yuri. and love."</sub>
         <div class="topnav">
             <a id="index" href="index.html">what</a>
