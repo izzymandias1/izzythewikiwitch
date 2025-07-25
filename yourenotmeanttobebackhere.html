@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="EN">
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+    @font-face {
+        font-family: "Roboto Mono";
+        src: url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+    }
+    :root {
+        --stepcount: 9;
+        --bg-color: #060906;
+        --type-color: #47974a;
+        --animationlength: 2s;
+    }
+    * {
+        color: var(--type-color);
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .bgimg {
+        opacity: 0.65;
+        display: inline-block;
+    }
+    body {
+        margin: 1em;
+        background: var(--bg-color);
+        justify-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container {
+        display: inline-block;
+    }
+    .hidden {
+        width: 0;
+        visibility: hidden;
+    }
+    .revealed {
+        width: 100%;
+        visibility: visible;
+    }
+    .typing {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 0;
+        animation: typing var(--animationlength) steps(var(--stepcount), end) forwards,
+            blinking 0.5s infinite;
+        border-right: 2px solid var(--type-color);
+    }
+    .typed {
+        overflow: hidden;
+    }
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+    @keyframes blinking {
+        0% {border-right-color: transparent}
+        50% {border-right-color: var(--type-color)}
+        100% {border-right-color: transparent}
+    }       
+</style>
+
+<head>
+    <title>you're not meant to be back here.</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="crt.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="typing()">
+    <main class="crt">
+        <div>
+            <img class="bgimg" src="images/Deer Pattern no BG.png" alt="a spooky deer."><br/>
+            <div class="container">
+                <h1 id="heybuddy" class="typing">hey buddy</h1>
+            </div><br/>
+            <div class="container">
+                <p id="backhere" class="hidden"><i>you're not meant to be back here!</i></p>
+            </div><br/>
+            <div class="container">
+                <form id="form" class="hidden">
+                    <label for="fpass">Password:</label><br>
+                    <input type="text" id="fpass" value=" "><br><br>
+                    <input type="button" onclick="pass()" value="submit">
+                </form>
+            </div><br/>
+            <div class="container" id="answers"><br/></div>
+        </div>
+        <script>
+            function typing() {
+                function sleep(ms) {
+                    return new Promise(resolve => setTimeout(resolve, ms));
+                }
+                var r = document.querySelector(':root');
+                var rs = getComputedStyle(r);
+                var messagelength = document.getElementById('backhere').textContent.length;
+                
+                sleep(2000).then(() => document.getElementById('heybuddy').className = "typed");
+
+                sleep(2000).then(() => r.style.setProperty('--stepcount', messagelength));
+                sleep(2000).then(() => r.style.setProperty('--animationlength', '5s'));
+
+                sleep(2500).then(() => document.getElementById('backhere').className = "typing");
+
+                sleep(9000).then(() => document.getElementById('form').className = "revealed");
+            }
+            async function pass() {
+                function sleep(ms) {
+                    return new Promise(resolve => setTimeout(resolve, ms));
+                }
+                const responses = ["you're funny","beep boop, try again", "you can't be serious. no.", "my secrets are worth more than that.", "this is the backend, you'll need to try harder than that", "'erm, clearly you picked an easy password'. that's you, that's what you sound like", "suck a cock", "i'll be nice. you're very, very far off. good try though!"]
+                var random = Math.floor(Math.random() * responses.length);
+                var passInput = document.getElementById('fpass').value;
+                const br = document.createElement("br");
+                const br2 = document.createElement("br");
+
+                if (passInput == "yuri"){  
+                    document.getElementById('answers').append("...");
+                    document.getElementById('answers').append(br);
+                    sleep(2000).then(() => document.getElementById('answers').append("my lawyers told me that that would be too obvious."));
+                    sleep(2000).then(() => document.getElementById('answers').append(br2));  
+                    sleep(5000).then(() => document.getElementById('answers').append(" welp! on you go then!"));
+                    sleep(6000).then(() => location.href = 'fische.html');
+                }    
+                else if (passInput == "password" || passInput == "1234"){
+                    document.getElementById('answers').append("booooo. do you think my password security is that bad?");
+                    document.getElementById('answers').append(br);
+                } else {
+                    document.getElementById('answers').append(responses[random]);
+                    document.getElementById('answers').append(br);
+                }
+            }
+        </script>
+    </main>
+</body>
+</html>

@@ -368,7 +368,7 @@ summary {
 }
 
 /* Six columns side by side */
-.column {
+.columngallery {
   float: left;
   width: 16.66%;
 }
@@ -476,6 +476,10 @@ code.horus:hover {
 
 .buttonrow{
     display: flex;
+}
+
+.buttonrow a{
+  text-decoration: none;
 }
 
 .buttoncolumn{

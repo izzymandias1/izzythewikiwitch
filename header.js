@@ -10,6 +10,7 @@
             <a id="index" href="index.html">what</a>
             <a id="about" href="about.html">who</a>
             <a id="portfolio" href="portfolio.html">portfolio</a>
+            <a id="monsterranking" href="monsterranking.html">monster</a>
         </div>
     </header>`;
     document.getElementById("app-header").innerHTML = appHeader;
