@@ -11,6 +11,14 @@
             <a id="about" href="about.html">who</a>
             <a id="portfolio" href="portfolio.html">portfolio</a>
             <a id="monsterranking" href="monsterranking.html">monster</a>
+            <div class="dropdown">
+            <button class="dropbtn" id="shrines">shrines
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="shrines/signalis">signalis</a>
+                </div>
+            </div>
         </div>
     </header>`;
     document.getElementById("app-header").innerHTML = appHeader;
