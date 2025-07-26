@@ -16,7 +16,7 @@
                 <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="shrines/signalis">signalis</a>
+                    <a href="shrines/signalis.html">signalis</a>
                 </div>
             </div>
         </div>
