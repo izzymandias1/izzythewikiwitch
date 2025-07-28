@@ -101,6 +101,7 @@ let appHeader = `
                 </button>
                 <div class="dropdown-content">
                     <a href="shrines/signalis.html">signalis</a>
+                    <a href="shrines/greenyuri.html">the guy she was interested in wasn't a guy at all<br/> (aka the green yuri)</a>
                 </div>
             </div>
         </div>`;
