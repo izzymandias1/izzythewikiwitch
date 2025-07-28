@@ -100,7 +100,7 @@ let appHeader = `
                 <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="shrines/signalis.html">signalis</a>
+                    <a href="shrines/signalis.html">signalis (under construction!)</a>
                     <a href="shrines/greenyuri.html">the guy she was interested in wasn't a guy at all<br/> (aka the green yuri)</a>
                 </div>
             </div>
