@@ -91,17 +91,17 @@ let appHeader = `
     }
         </style>
         <div class="topnav">
-            <a id="index" href="index.html">what</a>
-            <a id="about" href="about.html">who</a>
-            <a id="portfolio" href="portfolio.html">portfolio</a>
-            <a id="monsterranking" href="monsterranking.html">monster</a>
+            <a id="index" href="../index.html">what</a>
+            <a id="about" href="../about.html">who</a>
+            <a id="portfolio" href="../portfolio.html">portfolio</a>
+            <a id="monsterranking" href="../monsterranking.html">monster</a>
             <div class="dropdown">
             <button class="dropbtn" id="shrines">shrines
                 <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="shrines/signalis.html">signalis (under construction!)</a>
-                    <a href="shrines/greenyuri.html">the guy she was interested in wasn't a guy at all<br/> (aka the green yuri)</a>
+                    <a href="../shrines/signalis.html">signalis (under construction!)</a>
+                    <a href="../shrines/greenyuri.html">the guy she was interested in wasn't a guy at all<br/> (aka the green yuri)</a>
                 </div>
             </div>
         </div>`;
