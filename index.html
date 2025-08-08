@@ -135,9 +135,11 @@
             /* Smaller comment text on mobile */
         }
     }
-    .center:hover{
+
+    .center:hover {
         background-color: var(--izzy-mid-navy);
     }
+
 </style>
 
 <head>
@@ -151,7 +153,7 @@
 
 <body>
     <header id="app-header"></header>
-    <script async src="header.js"></script>  
+    <script async src="header.js"></script>
     <main>
         <div class="center">
             <h1>this is what we call "site content"</h1>
@@ -181,21 +183,28 @@
             <details>
                 <summary> click if you want. or don't. that's the point of consent, eh? </summary>
                 <img class="imgfocus" src="images/boobies_with_a_point.png"
-                alt="a character with boobs and a penis. it's fucking awesome."
-                width="200" />
+                    alt="a character with boobs and a penis. it's fucking awesome." width="200" />
                 <p>yippie, a naked woman!!</p>
             </details>
             <p>
-                incredible, i know. this is what the uk government wants to take away from us. and by that i mean, there's a <b>LOT</b> of people who are very,
-                very interested in ensuring that anything they deem "pornographic" has no place on the internet. the above is a naked woman. to say it's pornographic isn't just transmisogynistic and sexist more generally,
-                but also just kinda weirdo shit? i have made art and there are many who are convinced that that art is inherently immoral.
+                incredible, i know. this is what the uk government wants to take away from us. and by that i mean,
+                there's a <b>LOT</b> of people who are very,
+                very interested in ensuring that anything they deem "pornographic" has no place on the internet. the
+                above is a naked woman. to say it's pornographic isn't just transmisogynistic and sexist more generally,
+                but also just kinda weirdo shit? i have made art and there are many who are convinced that that art is
+                inherently immoral.
             </p>
             <p>
-                really, we should've left "i know it when i see it" politics back in the 80s. we also shouldn't be handing out ids over to any institution, least of which a foreign company that runs
-                fucking <b>fortnite</b>. so, if you want to see nsfw things (or anything, really) from me, keep an eye here.
-            </p><br/>
+                really, we should've left "i know it when i see it" politics back in the 80s. we also shouldn't be
+                handing out ids over to any institution, least of which a foreign company that runs
+                fucking <b>fortnite</b>. so, if you want to see nsfw things (or anything, really) from me, keep an eye
+                here.
+            </p><br />
             <h2><b>anyways. here's a song that fucks:</b></h2>
-            <div style="left: 0; width: 100%; height: 120px; position: relative; padding: 2em; margin: 0.8em;"><iframe src="https://embed.tidal.com/tracks/175149291" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="encrypted-media *;"></iframe></div>
+            <div style="left: 0; width: 100%; height: 120px; position: relative; padding: 2em; margin: 0.8em;"><iframe
+                    src="https://embed.tidal.com/tracks/175149291"
+                    style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen
+                    allow="encrypted-media *;"></iframe></div>
         </div>
         <!--Comment box-->
         <div>
@@ -209,10 +218,9 @@
                 <!---and again lol--->
                 <button type="submit">Post</button>
             </form>
-            
+
             <!-- Comments Display -->
             <div id="comments"></div>
-            
             <script>
                 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzhQwCIc7UYDZkFu8zWy6SYF67qmcxfcBWkD9sGAby61LmWE9fuQ1DEdi8okcwiRWQQVw/exec'; // Replace with your Google Apps Script URL
 
@@ -251,13 +259,15 @@
                         body: JSON.stringify(data)
                     }).then(() => window.location.reload()); // Refresh to show new comment
                 });
-            </script>          
-            
+            </script>
         </div>
+        <div id="scrollbtns"></div>
+        <script async src="scroll.js"></script>
+        <script async src="scrollFunction.js"></script>
     </main>
     <footer id="app-footer"></footer>
     <script async src="footer.js"></script>
-    <script async src="buttons.js"></script>   
+    <script async src="buttons.js"></script>
 </body>
 
 </html>
