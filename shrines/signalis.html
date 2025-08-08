@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html lang="EN">
+<style>
+    :root {
+        --body-width: 1000px;
+        --signalis-dark-grey: #0f0f0f;
+        --signalis-grey: #1b1b1b;
+        --signalis-dark-red: #57000b;
+        --signalis-bright-red: #950015;
+        --signalis-pink: #93092b;
+        --signalis-salmon: #df787b;
+    }
+
+    .header {
+        width: var(--body-width);
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    body {
+        background-color: var(--signalis-grey);
+        background-image: url('../images/elster_bg.gif');
+        margin: auto;
+        width: var(--body-width);
+    }
+
+    .footertext {
+        width: var(--body-width);
+        font-size: 1rem;
+        background-color: var(--signalis-grey);
+        color: var(--signalis-salmon);
+    }
+
+    .container {
+        width: var(--body-width);
+        background-color: var(--signalis-grey);
+        color: var(--signalis-salmon);
+        display: block;
+        text-align: center;
+        align-items: center;
+        justify-self: center;
+        padding: 1em;
+        margin: auto;
+    }
+
+    .container:hover {
+        background-color: var(--signalis-dark-grey);
+    }
+
+    .stretch {
+        width: var(--body-width);
+        margin: auto;
+        padding: 1em;
+        border-radius: 2em;
+    }
+
+    h1,
+    sub {
+        display: block;
+        text-shadow: 0em 0.05em var(--signalis-pink);
+        background-color: var(--signalis-dark-grey);
+        padding: 0.2em;
+    }
+
+    h1:hover,
+    sub:hover {
+        color: var(--signalis-salmon);
+    }
+
+    iframe {
+        display: block;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        max-width: var(--body-width);
+        width: 90%;
+        border: none;
+    }
+
+    figure {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        max-width: var(--body-width);
+    }
+    figcaption {
+        font-style: italic;
+    }
+
+    /* HORUS type */
+    code.horus,
+    b.horus {
+        font-size: 1rem;
+        background-color: rgba(0, 0, 0, 0.7) !important;
+        box-shadow: none;
+        color: white;
+        font-style: normal;
+        letter-spacing: 0.05em;
+        border-radius: 0;
+        text-align: center;
+    }
+    b {
+        text-shadow: 2px 0px var(--signalis-bright-red);
+    }
+
+    .horus:hover {
+        background-color: black !important;
+        animation: distort 0.6s infinite;
+        text-align: center;
+        /*  text-transform: uppercase; */
+        font-weight: bold;
+    }
+    code.horus:hover{
+        background-color: black !important;
+        animation: distort 0.6s infinite;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .horus--subtle {
+        animation: distort-subtle 5s infinite;
+    }
+
+    @keyframes distort {
+        0% {
+            text-shadow: 2px 1px #ff00ff, -2px -3px #00ffff;
+            transform: translate(-1px, 1px) translate3D(-5px, 0px, 0) rotate(-0.1deg);
+            cursor: crosshair;
+        }
+
+        25% {
+            text-shadow: -2px -3px #ff00ff, 2px 1px #00ffff;
+            transform: translate(2px, 1px) translate3D(-5px, 0px, 0) rotate(-0.1deg);
+            cursor: cell;
+        }
+
+        50% {
+            text-shadow: 2px -1px #ff00ff, -4px 1px #00ffff;
+            transform: translate(-2px, 1px) translate3D(-5px, 0px, 0) rotate(-0.1deg);
+            cursor: col-resize;
+        }
+
+        75% {
+            text-shadow: -4px -1px #ff00ff, -2px -1px #00ffff;
+            transform: translate(3px, 1px) translate3D(-5px, 0px, 0) rotate(-0.1deg);
+            cursor: move;
+        }
+
+        100% {
+            text-shadow: -2px 0 #ff00ff, 2px -1px #00ffff;
+            transform: translate(-2px, 0) translate3D(-5px, 0px, 0) rotate(-0.1deg);
+            cursor: all-scroll;
+        }
+    }
+
+    @keyframes distort-subtle {
+        25% {
+            text-shadow: none;
+        }
+
+        26% {
+            text-shadow: 2px -1px #ff0000, -2px 3px #00ffff;
+        }
+
+        27% {
+            text-shadow: -2px -3px #ff0000, 2px 1px #00ffff;
+        }
+
+        28% {
+            text-shadow: 2px 1px #ff0000, -4px 1px #00ffff;
+        }
+
+        29% {
+            text-shadow: -4px 1px #ff0000, -2px -1px #00ffff;
+        }
+
+        30% {
+            text-shadow: none;
+        }
+
+        75% {
+            text-shadow: none;
+        }
+
+        76% {
+            text-shadow: -4px 1px #ff0000, -2px -1px #00ffff;
+        }
+
+        77% {
+            text-shadow: -2px -3px #ff0000, 2px 1px #00ffff;
+        }
+
+        78% {
+            text-shadow: 2px -1px #ff0000, -2px 3px #00ffff;
+        }
+
+        79% {
+            text-shadow: 2px 1px #ff0000, -4px 1px #00ffff;
+        }
+
+        80% {
+            text-shadow: none;
+        }
+    }
+</style>
+
+<head>
+    <title>signalis</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../cssreset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <base href=".." target="_self">
+</head>
+
+<body>
+    <header>
+        <div id="app-header" class="container"></div>
+        <script async src="header_shrines.js"></script>
+        <div class="container">
+            <img src="images/signalis_banner.webp"
+                alt="the logo of the video games signalis. it is a hexagon, glitching on occasion." class="stretch"><br>
+            <h1>SIGNALIS</h1>
+            <sub>or how i stopped worrying and learned to love the inevitably of endings</sub>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <p>signalis is a very good game. i don't think i need to reiterate that too many times. it's got everything;
+                <b>anti-capitalism</b>, <b>cosmic horror</b>, and of course, <b>severely tragic lesbians.</b></p>
+            <p>if you haven't yet played it, <strong>go buy it (or pirate it) and play it right this fucking
+                    instant</strong>. i cannot and will not claim to do as much justice as playing the damn game
+                yourself.</p>
+            <p>if you're a bit of a bitch when it comes to horror like i am, don't worry - the horror is in the eternal
+                sadness, far more than it is in jumpscares. it's far more creepy than it is horror focused, and 99% of
+                the jumpscares
+                aren't really that - they're a loud screech from an enemy you can see, and an enemy you can
+                <b>fight.</b></p>
+            <p>so yes go buy it right this instant. i'll even include a little steam embed just to minimise the amount
+                of clicks this takes.</p>
+        </div>
+        <div class="container">
+            <iframe src="https://store.steampowered.com/app/1262350/SIGNALIS/"></iframe>
+        </div>
+        <div class="container">
+            <h2>failing that...</h2>
+            <p>if you are really so stubborn you won't play the beautiful amazing perfect video game, fine. watch this
+                instead;</p>
+        </div>
+        <div class="container">
+            <iframe src="https://www.youtube.com/embed/00gn8kOvXm8" width="420" height="315"></iframe>
+        </div>
+        <div class="container">
+            <p>i love you jane signalis,,,</p>
+            <p>speaking of, now that you've either played the best sf game you've ever played (or watched a comedic
+                summary of it), what do i think about signalis? well i don't think i can really describe that without summarising the game. so. lets do that.</p>
+        </div>
+        <div class="container">
+            <h2>imagine this:</h2>
+            <p>you're an outcast with suspiciously white hair (this makes you distinct in all the cutscenes!). your name
+                is <b>ariane</b>, and you've lived a pretty shit, miserable life.</p>
+            <figure>
+                <img src="images/ariane_signalis_medical.jpg"
+                    class="stretch">
+                <figcaption>life ain't always cookies n cream lil fella</figcaption>
+            </figure><br/>
+            <p>you grew up on a shithole planet, in a frigid apartment block. you see, ariane lives in a state that is
+                communist (the cringe, stalinist, eastern german kind,
+                instead of the gay luxury automated space communism- we'll get to that in a bit). she lives in the
+                <b>eusan state</b>, aka "what a republican imagines communism to be"</p>
+            <p>these guys follow the stereotypes to a tee. anti-conformity is a terrible misnomer. so much so that, as
+                both a justification of a game mechanic and an extension of the game's fetish with the number
+                <b class="horus">six</b> (we'll get to that too), a worker is only permitted to carry <b
+                    class="horus">six</b> items on their person at a time. wowie zowie! this place fucking sucks!
+            </p>
+            <p>the eusan state has been at war with the eusan kingdom, the other major player in the solar system, for a
+                long ass time. one of the planets, <b>vineta</b>, was almost certainly glassed during the war. these two
+                really fucking hate each other</p>
+            <p>there's a pervasive feeling, both aesthetically and thematically throughout, that whether the eusan's
+                were right in their revolution or not doesn't matter all that much anymore. they're making a mockery of
+                their ideals, their statehood, and their people.
+                among them, of course, is ariane. ariane lives on <b>rotfront</b> - killer name for a planet, btw -
+                which is a frozen shithole. she grew up with her mother out at a remote listening post on her homeworld,
+                <b>leng</b>, but now she lives in an urban blockwart, gets bullied at school,
+                and is generally not living a great life. and then, after all that, she gets a work assignment from the
+                state. fantastic! finally, an escape from this despicable piece of shit-</p>
+            <code class="horus">aeon facility re-education facility sierpinski s-23 - mine worker</code>
+            <p>ariane's military service and past life collide. the state wants to send her to a re-education camp. she
+                will most likely die there.</p>
+            <p>so! in a last ditch effort, she joins...</p>
+        </div>
+        <div class="container">
+            <h2>the penrose programme</h2>
+            <figure>
+                <img src="https://signalis.wiki.gg/images/thumb/5/50/Operation_Penrose_art.png/600px-Operation_Penrose_art.png" class="stretch">
+                <figcaption>oh hey i'm sure there's no way this can go wrong</figcaption>
+            </figure><br/>
+            <p><b>the penrose programme</b> plans to send the nation's best and brightest on a long burn out of the solar
+                system, in search of new planets and new life. without many other options, ariane reaches out, and
+                succeeds!
+                she is assigned to penrose-512, along with a replika partner, lstr-512.</p>
+            <p>replikas- they're androids, but the question of their sentience is not one to be answered in this game.
+                they are patently people, whether the state considers them such or not. they're also created, in part,
+                through the use of psychic powers (called <b>bioresonence</b> - we'll get to it) on powerful "gestalts"
+                - what the game calls non-replika humans
+                the lstr unit is derived from a soldier, a revolutionary, who fought on <b>vineta</b>, perhaps long ago,
+                during the early days of the revolution.</p>
+            <p>regardless of her co-pilot's capacity and concerns, there is one thing above all that all the manuals
+                tell ariane - she is not to form a bond with the lstr. it is a tool, first and foremost.</p>
+            <p>i'm sure you can see exactly where this went.</p>
+        </div>
+        <div class="container">
+            <h2>space yuri, or how the state cannot kill love</h2>
+            <p>surprising literally no one, the two people forced into a pod, flying beyond the edge of known space, alone
+                with only each other, fell in love. and it was beautiful.</p>
+            <figure>
+                <img src="https://media1.tenor.com/m/HxI08Au4ZTAAAAAd/arainydancer-atelier.gif" class="stretch">
+                <img src="https://media1.tenor.com/m/fShfn7brk_gAAAAd/signalis-ariane.gif" class="stretch">
+                <img src="https://media1.tenor.com/m/5r29WX02daAAAAAd/signalis-elster.gif" class="stretch">
+                <img src="https://media1.tenor.com/m/KH3SxWvWKxIAAAAd/elster-ariane.gif" class="stretch">
+                <img src="https://media1.tenor.com/m/iZ-aAVQpAmMAAAAd/signalis-elster.gif" class="stretch">
+                <figcaption>despite everything. life is good for a while.</figcaption>
+            </figure><br/>
+            <p>this i think is one of the most important aspects of <b>signalis</b>. not just because of the yuri (god i love yuri) but also because ariane and lstr-512 - 
+                elster, her name is elster - spend <b>years</b> of their life together. just the two of them, finding companionship and joy and love and life in a tiny 
+                sarcophagus on the edge of space. for ariane, this is freedom; she is herself and free to be herself, forever and ever and ever. for elster, 
+                she is free too, even if she doesn't yet know it.</p>
+            <p>we haven't even started looking at the game yet (stupid me for choosing to sum this story up in chronological order), but i think this is deeply important to
+                any potential reading of <b>signalis</b>. beyond the space lesbians, beyond the deep dark eldritch horrors and the meet pit and <b class="horus">six</b> and
+                the ever present horror of being separated from the ones you love and being forced into a box that you do not fit in, beyond all of this, signalis is about
+            </p>
+            <h2 class="horus">freedom.</h2>
+            <p>at any cost, to the self, to the body, to the world. it is worth it to fight for freedom.</p>
+            <p>so anyways then elster dies.</p>
+        </div>
+        <div class="container">
+            <h2>elster dies</h2>
+            <p>if you haven't figured it out yet, or you missed this particular readable in game (no idea how but whatever), the penrose programme is a propaganda stunt.
+                this is gonna be kind of niche reference, but have y'all seen for all mankind season 3? it's not a great show but one of its best elements is when it actually
+                lets the humanity of its characters come to the foreground (joel kinnaman non-withstanding). in its third season, as humanity are travelling to mars for the first manned missions ever
+                they find that north korea, under the guise of a missile test, had launched their own mission to the planet. and, strangely enough, they won. their astronaut was the first to land
+                on mars.
+            </p>
+            <p>they were also never meant to make it home.</p>
+            <p>one of the astronauts dies in the rough landing. the other dreams of home as supplies quickly dwindle. he imagines his family, so far away, never to see or hear from him again.</p>
+            <p>isn't he brave. isn't he stupid.</p>
+            <p>elster dies because the penrose vessel wasn't designed to last. it only had a few years' supplies at most, and worse, the reactor begins to break down. there is a cryo pod that could keep someone going for a long,</p>
+            <h3>long</h3>
+            <h2>long</h2>
+            <code class="horus"><b>long</b></code>
+            <p>time.</p>
+            <img src="https://static.wikia.nocookie.net/signalis/images/2/2f/ElsterAndAriane_Promise.jpg/revision/latest?cb=20240723004951" class="stretch">
+            <p>elster makes a promise to ariane, or ariane asks her to promise. it doesn't really matter either way. elster puts ariane in the pod, or she finds her way there as her bones crackle
+                and her skin boils from the cancer and the gas. elster makes the promise, and dies trying to fix the reactor.
+            </p>
+            <p>elster fails.</p>
+        </div>
+        <div class="container">
+            <h2>and then the game begins</h2>
+            <p><i>i told you this shit was hard to chronologise.</i></p>
+            <p>we open on a tundra planet. penrose-512 has crashed, and elster... is alive. when first playing the game, this is where the story starts. we are on a frozen world, and there's an empty cryo pod.
+                we venture out into the cold, in search of someone with white hair. we don't, yet, know who this is.
+            </p>
+            <img src="https://static1.dualshockersimages.com/wordpress/wp-content/uploads/2022/12/signalis-10-1.png">
+            <img src="https://media1.tenor.com/m/XHvFEZG-t0sAAAAd/signalis-silent-hill.gif">
+            <img src="https://media1.tenor.com/m/WDrEgw22Qt0AAAAC/signalis.gif">
+            <img src="https://media1.tenor.com/m/_RJ3iCmSeqAAAAAd/signalis-radiohead.gif">
+        </div>
+    </main>
+    <footer>
+        <div id="app-footer" class="container"></div>
+    </footer>
+    <script async src="footer_shrines.js"></script>
+    <script async src="buttons.js"></script> 
+</body>
+
+</html>

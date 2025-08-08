@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="EN">
+
+<style>
+    body {
+        justify-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('images/fish.gif');
+        background-color: whitesmoke;
+    }
+</style>
+
+<head>
+    <title>fish</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="fish()">
+    <main>
+        <h1>fish</h1>
+        <p>fish</p>
+        <img src="images/fish(2).gif">
+        <h1>fish</h1>
+        <audio id="fish" src="sounds/fish.mp3"></audio>
+        <button onclick="fish()">fish</button>
+        <script>    
+            function fish(){
+                const fish = document.getElementById('fish');
+                fish.play();   
+            }
+        </script>
+    </main>
+</body>
+</html>
