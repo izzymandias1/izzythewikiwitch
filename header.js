@@ -18,6 +18,7 @@
                 <div class="dropdown-content">
                     <a href="shrines/signalis.html">signalis (under construction!)</a>
                     <a href="shrines/greenyuri.html">the guy she was interested in wasn't a guy at all</br>(aka the green yuri)</a>
+                    <a href="shrines/outer_wilds.html">outer wilds</a>
                 </div>
             </div>
         </div>
