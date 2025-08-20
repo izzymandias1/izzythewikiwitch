@@ -32,7 +32,18 @@ div.buttonscontainer{
     flex: 33.33%;
     padding: 5px;
 }
+    .overhang {
+    position: relative;
+    bottom: 18rem;
+    left: 25rem;
+}
+    .dizzy{
+        width: 400px;
+}
 </style>
 <div id="buttonscontainer" class="buttonscontainer"></div>
-<div><p>izzythewikiwitch <a href="yourenotmeanttobebackhere.html">©</a> 2025</p></div>`;
+<div><p>izzythewikiwitch <a href="yourenotmeanttobebackhere.html">©</a> 2025</p></div>
+<div class="overhang">
+    <img src="images/swingin (no overhang).gif" alt="dizzy, her leg swinging over the footer" class="dizzy">
+</div>`;
 document.getElementById("app-footer").innerHTML = appFooter;
