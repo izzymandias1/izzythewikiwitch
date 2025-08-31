@@ -101,7 +101,10 @@ body {
     --text-color-base-light: #dbdbdb;
     --text-color-disabled: #f2f2f2;
     background-color: var(--izzy-navy);
-    background-image: url('images/Deer_tile.png');
+    background-image: url('images/Dizzy Deer Background.png');
+    background-repeat: repeat-x repeat-y;
+    background-attachment: scroll;
+    background-size: contain;
     color: var(--text-color-base-light);
     display: flex;
     flex-direction: column;
