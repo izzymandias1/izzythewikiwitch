@@ -20,6 +20,7 @@ let appFooter = `
     }
     .div_top{
         position: relative;
+        margin-top: 50px;
         bottom: 3rem;
     }
 }

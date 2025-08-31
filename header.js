@@ -4,7 +4,7 @@
         <img class="logo" src="images/buttons/me_irl_(starship_velo).gif"
             alt="izzy's logo for 2024 to 2025. a picture of a woman with deer antlers in front of the lesbian flag."
             height="400" />
-        <img src="images/dizzysitelogo1.png" width="var(--body-width)" style="margin-bottom: 1em; padding: 1em"><br/>
+        <img src="images/Dizzy Deer Banner.png" width="var(--body-width)" style="margin-bottom: 0.1em; padding: 1em; border-radius: 50px;"><br/>
         <sub>"what if i made my own wiki. with yuri. and love."</sub>
         <div class="topnav">
             <a id="index" href="index.html">what</a>
