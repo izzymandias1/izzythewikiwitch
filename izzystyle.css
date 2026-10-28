@@ -101,7 +101,10 @@ body {
     --text-color-base-light: #dbdbdb;
     --text-color-disabled: #f2f2f2;
     background-color: var(--izzy-navy);
-    background-image: url('images/Deer_tile.png');
+    background-image: url('images/Dizzy Deer Background.png');
+    background-repeat: repeat-x repeat-y;
+    background-attachment: scroll;
+    background-size: contain;
     color: var(--text-color-base-light);
     display: flex;
     flex-direction: column;
@@ -194,7 +197,7 @@ sub {
 .tooltip {
     position: relative;
     display: inline-block;
-    border-bottom: 0.5px dotted var(--izzy-dark-navy);
+    border-bottom: 0.5px dotted var(--text-color-base-dark);
     /* If you want dots under the hoverable text */
 }
 
@@ -202,7 +205,7 @@ sub {
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
-    background-color: var(--izzy-dark-navy);
+    background-color: var(--text-color-base-dark);
     color: var(--izzy-gold);
     text-align: center;
     padding: 5px 0;

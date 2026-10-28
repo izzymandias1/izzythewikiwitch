@@ -11,7 +11,7 @@ let buttonsContainer = `
             <div class="buttoncolumn"><a href="https://www.bonfire.com/pls-dont-sue-us-either/"><img loading="lazy" src="images/blinkies/we'll kill ya.gif"></a></div>
         </div>
         <div class="buttonrow">
-            <div class="buttoncolumn"><a><img src="https://i.imgur.com/Uzs8jxn.png" alt="Transfem (Transfem flag)"></a></div>
+            <div class="buttoncolumn"><a><img src="images/buttons/trans flag button.png" alt="Transfem (Transfem flag)"></a></div>
             <div class="buttoncolumn"><a href="https://ia802308.us.archive.org/24/items/am-i-a-lesbian-masterdoc/Am%20I%20a%20Lesbian_%20Masterdoc.pdf"><img src="images/lesbian.png" alt="Femme (Lesbian flag)"></a></div>
             <div class="buttoncolumn"><a href="https://www.gutenberg.org/ebooks/42166"><img src="images/sapphic.png" alt="Sapphic (Sapphic flag)"></a></div>
         </div>
